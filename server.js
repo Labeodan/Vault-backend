@@ -4,6 +4,7 @@ const mongoose = require('mongoose')
 const MongoStore = require("connect-mongo");
 const methodOverride = require('method-override')
 const path = require('path');
+const authRouter = require("./controllers/auth")
 
 
 
@@ -18,7 +19,9 @@ const port = 3000
 
 
 // ! -- Middleware
+app.use(express.json());
 app.use(morgan('dev'));
+
 
 
 
@@ -28,7 +31,7 @@ app.get('/', (req, res) => {
 
 
 //Controller
-
+app.use("/auth", authRouter)
 
 // Start the Express server
 const startServers = async () => {
