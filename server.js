@@ -7,10 +7,6 @@ const path = require('path');
 const authRouter = require("./controllers/auth")
 
 
-
-
-
-
 require('dotenv/config')
 
 // ! -- Variables
