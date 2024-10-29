@@ -1,0 +1,18 @@
+[
+    { "name": "Groceries", "amount": 50, "type": "Expense" },
+    { "name": "Bus Ticket", "amount": 2.5, "type": "Expense" },
+    { "name": "Electricity Bill", "amount": 75, "type": "Expense" },
+    { "name": "Dinner at Restaurant", "amount": 30, "type": "Expense" },
+    { "name": "Gym Membership", "amount": 45, "type": "Expense" },
+    { "name": "Movie Night", "amount": 15, "type": "Expense" },
+    { "name": "Monthly Salary", "amount": 3000, "type": "Income" },
+    { "name": "Freelance Project", "amount": 500, "type": "Income" },
+    { "name": "Gift from Friend", "amount": 100, "type": "Income" },
+    { "name": "Bonus", "amount": 250, "type": "Income" },
+    { "name": "Side Hustle", "amount": 200, "type": "Income" },
+    { "name": "Investment Returns", "amount": 150, "type": "Income" },
+    { "name": "Birthday Money", "amount": 300, "type": "Income" },
+    { "name": "Selling Old Furniture", "amount": 200, "type": "Income" },
+    { "name": "Selling Crafts", "amount": 75, "type": "Income" },
+    { "name": "Part-time Job", "amount": 400, "type": "Income" }
+]

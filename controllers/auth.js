@@ -75,6 +75,8 @@ router.post("/signin", async (req, res) => {
 
         // check if passwords match
         const comparePassword = bcrypt.compareSync(password, user.password)
+        console.log(password)
+        console.log(user.password)
 
         if (!comparePassword) {
             console.log("Passwords Do Not Match")

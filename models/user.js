@@ -10,6 +10,12 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
+})
+
+userSchema.set('toJSON', {
+    transform: (document, returnedObject) => {
+        delete returnedObject.password;
+    }
 });
 
 const User = mongoose.model("User", userSchema);

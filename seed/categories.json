@@ -1,0 +1,9 @@
+[
+    { "name": "Food", "color": "ff5733" },
+    { "name": "Transport", "color": "33c1ff" },
+    { "name": "Utilities", "color": "33ff57" },
+    { "name": "Entertainment", "color": "ff33f1" },
+    { "name": "Health", "color": "f1c40f" },
+    { "name": "Salary", "color": "8e44ad" },
+    { "name": "Gifts", "color": "e67e22" }
+]
