@@ -10,11 +10,6 @@ const categorySchema = new mongoose.Schema({
         require: true,
         default: "ffffff"
     },
-    owner: {
-        type: mongoose.Types.ObjectId,
-        ref: 'User',
-        required: true,
-    },
 
 });
 

@@ -5,6 +5,8 @@ const MongoStore = require("connect-mongo");
 const methodOverride = require('method-override')
 const path = require('path');
 const authRouter = require("./controllers/auth")
+const categoriesRouter = require("./controllers/categories")
+const transactionRouter = require("./controllers/transactions")
 
 
 
@@ -32,6 +34,8 @@ app.get('/', (req, res) => {
 
 //Controller
 app.use("/auth", authRouter)
+app.use("/category", categoriesRouter)
+app.use("/transactions", transactionRouter)
 
 // Start the Express server
 const startServers = async () => {
