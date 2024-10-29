@@ -2,17 +2,6 @@ const express = require("express")
 const Category = require("../models/category")
 const router = express.Router()
 
-// const defaultCategories = [
-//     { name: "Food", color: "ff0000" },
-//     { name: "Transport", color: "00ff00" },
-//     { name: "Shopping", color: "0000ff" },
-//     { name: "Entertainment", color: "ffa500" },  // Orange
-//     { name: "Healthcare", color: "ff69b4" },     // Pink
-//     { name: "Utilities", color: "8a2be2" },      // Purple
-//     { name: "Education", color: "4682b4" }       // Steel Blue
-// ];
-
-
 router.post("", async (req, res) => {
     try {
         const { name } = req.body
