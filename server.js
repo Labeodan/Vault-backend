@@ -5,10 +5,11 @@ const MongoStore = require("connect-mongo");
 const methodOverride = require('method-override')
 const path = require('path');
 const authRouter = require("./controllers/auth")
+const cors = require('cors')
+
 const categoriesRouter = require("./controllers/categories")
 const transactionRouter = require("./controllers/transactions")
 const budgetRouter = require("./controllers/budget")
-
 
 require('dotenv/config')
 
@@ -18,6 +19,7 @@ const port = 3000
 
 
 // ! -- Middleware
+app.use(cors({ origin: 'http://localhost:5173' }))
 app.use(express.json());
 app.use(morgan('dev'));
 
