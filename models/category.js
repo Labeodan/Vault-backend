@@ -10,13 +10,8 @@ const categorySchema = new mongoose.Schema({
         require: true,
         default: "ffffff"
     },
-    owner: {
-        type: mongoose.Types.ObjectId,
-        ref: 'User',
-        required: true,
-    },
 
 });
 
-const Category = mongoose.model("Categories", userSchema);
+const Category = mongoose.model("Categories", categorySchema);
 module.exports = Category;
