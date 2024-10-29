@@ -7,6 +7,7 @@ const path = require('path');
 const authRouter = require("./controllers/auth")
 const categoriesRouter = require("./controllers/categories")
 const transactionRouter = require("./controllers/transactions")
+const budgetRouter = require("./controllers/budget")
 
 
 require('dotenv/config')
@@ -32,6 +33,7 @@ app.get('/', (req, res) => {
 app.use("/auth", authRouter)
 app.use("/category", categoriesRouter)
 app.use("/transactions", transactionRouter)
+app.use("/budget", budgetRouter)
 
 // Start the Express server
 const startServers = async () => {
