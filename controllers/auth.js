@@ -61,6 +61,7 @@ router.post("/signup", async ( req,res ) => {
 
 router.post("/signin", async (req, res) => {
     try {
+        console.log(req.body);
         const { username, password } = req.body
 
         // check if user exists
