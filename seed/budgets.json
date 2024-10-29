@@ -1,0 +1,10 @@
+[
+    { "name": "Monthly Food Budget", "target": 300, "startDate": "2024-01-01", "endDate": "2024-01-31" },
+    { "name": "Transport Budget", "target": 100, "startDate": "2024-01-01", "endDate": "2024-01-31" },
+    { "name": "Utilities Budget", "target": 150, "startDate": "2024-01-01", "endDate": "2024-01-31" },
+    { "name": "Entertainment Budget", "target": 200, "startDate": "2024-01-01", "endDate": "2024-01-31" },
+    { "name": "Monthly Food Budget", "target": 350, "startDate": "2024-01-01", "endDate": "2024-01-31" },
+    { "name": "Transport Budget", "target": 120, "startDate": "2024-01-01", "endDate": "2024-01-31" },
+    { "name": "Utilities Budget", "target": 180, "startDate": "2024-01-01", "endDate": "2024-01-31" },
+    { "name": "Entertainment Budget", "target": 250, "startDate": "2024-01-01", "endDate": "2024-01-31" }
+]
