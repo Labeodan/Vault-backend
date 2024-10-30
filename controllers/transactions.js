@@ -58,6 +58,7 @@ router.get("", verifyToken, async (req, res) => {
 
         // Retrieve user's transactions
         const transactions = await Transaction.find({ owner: userId });
+        console.log(transactions);
         return res.status(200).json({ transactions });
 
     } catch (error) {

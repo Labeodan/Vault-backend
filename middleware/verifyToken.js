@@ -5,7 +5,6 @@ const verifyToken = async (req, res, next) => {
     try {
         // get token from headers
         const token = req.headers.authorization?.split(" ")[1]
-
         // check if the token is present
         if (!token) {
             throw new Error("Token not present in Authorization Header")
@@ -28,8 +27,8 @@ const verifyToken = async (req, res, next) => {
         // run next middleware
         next()
     } catch (error) {
-    console.log(error)
-    return res.status(401).json({ error: 'Unauthorized' })
+        console.log(error)
+        return res.status(401).json({ error: 'Unauthorized' })
     }
 }
 
