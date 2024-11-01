@@ -12,12 +12,12 @@ const transactionSchema = new mongoose.Schema({
     },
 
     category: {
-        type: mongoose.Types.ObjectId,
+        type: mongoose.Schema.Types.ObjectId,
         ref: 'Category',
     },
 
     owner: {
-        type: mongoose.Types.ObjectId,
+        type: mongoose.Schema.Types.ObjectId,
         ref: 'User',
         required: true,
     },
