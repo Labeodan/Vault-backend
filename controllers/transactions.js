@@ -14,11 +14,11 @@ router.post("", verifyToken, async (req, res) => {
         const { name, amount, category, type } = req.body;
 
         // Check for duplicate transaction by name and owner
-        const existingTransaction = await Transaction.findOne({ owner: req.user._id, name });
-        if (existingTransaction) {
-            console.log("Transaction already exists");
-            return res.status(409).json({ error: "Transaction already exists" });
-        }
+        // const existingTransaction = await Transaction.findOne({ owner: req.user._id, name }).populate("category");
+        // if (existingTransaction) {
+        //     console.log("Transaction already exists");
+        //     return res.status(409).json({ error: "Transaction already exists" });
+        // }
 
         // Validate category existence
         const categoryObj = await Category.findOne({ name: category });
@@ -57,7 +57,7 @@ router.get("", verifyToken, async (req, res) => {
         }
 
         // Retrieve user's transactions
-        const transactions = await Transaction.find({ owner: userId });
+        const transactions = await Transaction.find({ owner: userId }).populate("category");
         console.log(transactions);
         return res.status(200).json({ transactions });
 
