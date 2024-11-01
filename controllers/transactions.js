@@ -21,7 +21,7 @@ router.post("", verifyToken, async (req, res) => {
         // }
 
         // Validate category existence
-        const categoryObj = await Category.findOne({ name: category });
+        const categoryObj = await Category.findById(category);
         if (!categoryObj) {
             console.log("Category does not exist");
             return res.status(400).json({ error: "The category does not exist" });
