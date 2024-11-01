@@ -19,7 +19,7 @@ const port = 3000
 
 
 // ! -- Middleware
-app.use(cors({ origin: 'http://localhost:5173' }))
+app.use(cors({ origin: 'https://financevault.netlify.app' }))
 app.use(express.json());
 app.use(morgan('dev'));
 
