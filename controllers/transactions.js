@@ -70,15 +70,15 @@ router.get("", verifyToken, async (req, res) => {
 // Get Single Transaction
 router.get("/:transactionId", verifyToken, async (req, res) => {
     try {
-        const { transactionId } = req.params;
 
-        // Validate transaction ID
+        const { transactionId } = req.params;
+         // Validate transaction ID
         if (!mongoose.Types.ObjectId.isValid(transactionId)) {
             return res.status(400).json({ error: "Invalid transaction ID" });
         }
 
         // Check if transaction exists and ownership
-        const transaction = await Transaction.findById(transactionId);
+        const transaction = await Transaction.findById(transactionId).populate('category');
         if (!transaction) {
             return res.status(404).json({ error: "Transaction not found" });
         }
@@ -120,8 +120,9 @@ router.put("/:transactionId", verifyToken, async (req, res) => {
 
         // Validate and assign category if provided
         let categoryId = transaction.category;
+        console.log("category", category);
         if (category) {
-            const categoryObj = await Category.findOne({ name: category });
+            const categoryObj = await Category.findById(category);
             if (!categoryObj) {
                 console.log("Category does not exist");
                 return res.status(400).json({ error: "The category does not exist" });

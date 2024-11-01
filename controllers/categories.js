@@ -7,21 +7,31 @@ router.post("", async (req, res) => {
         const { name } = req.body
 
         // check if category already exists
-        const category = await Category.findOne({name: name})
+        const category = await Category.findOne({ name: name })
 
         if (!category) {
             const createCategory = await Category.create(defaultCategories)
             return res.status(201).json(createCategory)
         } else {
-            return res.status(401).json({error: "Category already exists"})
+            return res.status(401).json({ error: "Category already exists" })
         }
-        
+
     } catch (error) {
         console.log(error)
-        return res.status(500).json({error: error})
+        return res.status(500).json({ error: error })
     }
 })
 
+router.get("", async (req, res) => {
+
+    try {
+        const categories = await Category.find();
+        return res.status(201).json(categories);
+    } catch (error) {
+        return res.status(400).json({ error: "Error in the query" })
+
+    }
+})
 
 // const User = require("../models/user.js");
 
