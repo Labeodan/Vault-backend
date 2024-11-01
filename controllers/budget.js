@@ -13,13 +13,14 @@ router.post("/", verifyToken, async (req, res) => {
         // Check for duplicate budget by name and owner
         const existingBudget = await Budget.findOne({ owner: req.user._id, name });
         if (existingBudget) {
-            return res.status(409).json({ error: "Budget with this name already exists" });
+            return res.status(409).json({ name: "Budget with this name already exists" });
         }
+
 
         // Find category by name and validate existence
         const categoryObj = await Category.findOne({ name: category });
         if (!categoryObj) {
-            return res.status(400).json({ error: "The specified category does not exist" });
+            return res.status(400).json({ category: "The specified category does not exist" });
         }
 
         // Create new budget with category ObjectId
