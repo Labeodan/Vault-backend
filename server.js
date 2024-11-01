@@ -20,7 +20,7 @@ const port = 3000
 
 // ! -- Middleware
 app.use(cors({
-    origin: ['https://financevault.netlify.app']
+    origin: process.env.FRONT_END_URL
   }));
 app.use(express.json());
 app.use(morgan('dev'));
