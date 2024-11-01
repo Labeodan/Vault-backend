@@ -4,11 +4,10 @@ const mongoose = require('mongoose')
 const MongoStore = require("connect-mongo");
 const methodOverride = require('method-override')
 const path = require('path');
-const authRouter = require("./controllers/auth")
 const cors = require('cors')
 const serverless = require('serverless-http')
 
-
+const authRouter = require("../../controllers/auth")
 const categoriesRouter = require("../../controllers/categories")
 const transactionRouter = require("../../controllers/transactions")
 const budgetRouter = require("../../controllers/budget")
